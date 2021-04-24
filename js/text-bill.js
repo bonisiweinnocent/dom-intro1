@@ -31,10 +31,10 @@ function textBillTotal(){
     smsTotalOneElement.innerHTML = smsTotal.toFixed(2);
      totalCost = callsTotal + smsTotal;
      totalOneElement.innerHTML = totalCost.toFixed(2);
-    addclasses()
+    addclass()
 }
 
-function addclasses(){
+function addclass(){
 
     // ... other code here
     
@@ -48,10 +48,11 @@ function addclasses(){
         // adding the danger class will make the text red
         totalOneElement.classList.add("danger");
     }
-    else if (totalCost >= 30){
+    else if (totalCost >= 30 && totalCost <50 ){
         totalOneElement.classList.add("warning");
     }
 }
+
 
 
 addToBillBtnElement.addEventListener('click', textBillTotal);
