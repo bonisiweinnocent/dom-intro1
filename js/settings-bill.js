@@ -97,7 +97,7 @@ add()
 function add() {
 
     
-    if (grandTotal > criticalSet) {
+    if (grandTotal >= criticalSet) {
         // adding the danger class will make the text red
         totalSettings.classList.add("danger");
     }
