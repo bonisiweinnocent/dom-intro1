@@ -51,7 +51,8 @@ if (billItemTypeWithSettingsElement){
         var billItem = billItems[i].trim();
 
         if(grandTotal<criticalSet){
-            if (billItem == "call") {
+            if (billItem ===
+                 "call") {
                 // console.log("call")
                 totalCall += callSet;
                 grandTotal += callSet;
@@ -59,7 +60,7 @@ if (billItemTypeWithSettingsElement){
             }
             else if (billItem === "sms") {
                 // console.log("sms")
-                smsTotal =+ smsSet;
+                totalSms =+ smsSet;
                 grandTotal += smsSet ;
                 // console.log(smsSet);
             }
@@ -77,7 +78,8 @@ add();
     console.log(callSet)
     callTotalSettingsElement.innerHTML = totalCall.toFixed(2);
 
-    smsTotalSettingsElement.innerHTML = smsTotal.toFixed(2);
+    smsTotalSettingsElement.innerHTML = totalSms.toFixed(2);
+    console.log(totalSms)
     // grandTotal = totalCall + totalSms;
     totalSettings.innerHTML = grandTotal.toFixed(2);
 
